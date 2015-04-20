@@ -1,0 +1,24 @@
+curl_init();	初始化一个CURL回话
+curl_setopt();
+func_num_args() 这个函数返回的是当前函数的参数数量 返回的是数字
+func_get_arg()函数返回的是指定位置的参数的值
+func_get_args()这个函数返回的是包含当前函数所有参数的一个数组
+error_reporting()	设置PHP的报错级别并返回当前级别		error_reporting(0)	禁用错误报告
+realplath();	返回绝对路径名
+pathinfo();		函数以数组的形式返回文件路径的信息
+date_default_timezone_set('Asia/Shanghai');
+php_sapi_name();	返回 web 服务器和 PHP 之间的接口类型
+strpos() 函数返回字符串在另一个字符串中第一次出现的位置。
+ob_start() 开始输出缓冲, 这时PHP停止输出, 在这以后的输出都被转到一个内部的缓冲里.
+ob_get_contents() 这个函数返回内部缓冲的内容. 这就等于把这些输出都变成了字符串.
+ob_get_ length() 返回内部缓冲的长度
+ob_end_flush() 结束输出缓冲, 并输出缓冲里的内容. 在这以后的输出都是正常输出.
+ob_end_clean() 结束输出缓冲, 并扔掉缓冲里的内容.
+/************ .htaccess **********/
+ob_start() - 打开输出控制缓冲
+ob_get_level — 返回输出缓冲机制的嵌套级别
+ob_get_contents() - 返回输出缓冲区的内容
+is_writable() 函数判断指定的文件是否可写。
+flock()	函数锁定或释放文件。若成功，则返回 true。若失败，则返回 false。
+.htaccess 文件创建:cmd: copy con .htaccess 回车；然后ctrl+z回车，则成功创建。
+serialize()/unserialize	序列化数据
