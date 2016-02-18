@@ -22,3 +22,11 @@ is_writable() 函数判断指定的文件是否可写。
 flock()	函数锁定或释放文件。若成功，则返回 true。若失败，则返回 false。
 .htaccess 文件创建:cmd: copy con .htaccess 回车；然后ctrl+z回车，则成功创建。
 serialize()/unserialize	序列化数据
+list()  用数组中的元素为一组变量赋值
+rawurlencode()  按照 RFC 1738 对 URL 进行编码,返回字符串，此字符串中除了 -_. 之外的所有非字母数字字符都将被替换成百分号（%）后跟两位十六进制数
+rawurldecode()  对已编码的 URL 字符串进行解码
+
+socket
+fsockopen() 打开一个网络连接或者一个Unix套接字连接,将返回一个文件句柄，之后可以被其他文件类函数调用
+feof()  测试文件指针是否到了文件结束的位置
+fgets() 从文件指针中读取一行
