@@ -1,0 +1,11 @@
+1、ereg 和 preg 的区别
+    PHP里边ereg已经逐渐被preg替代了
+    preg，代表“Perl的正则表达式（Perl Regular Expressions）”。
+    ereg，代表“扩展的正则表达式(Extended Regular Expressions)”。
+    这两组函数的主要区别有：
+    1.preg_replace()里面的正则可以写成型如："/..../"而ereg_replace()里面的正则需写成型如".....";
+    2.在逆向引用用preg_replace()可使用0-99个，而ereg_replace()最多为9个
+    3.preg_replace()能操作数组，而ereg_replace()不可以
+    4.ereg默认使用贪婪模式,并且不能修改
+    5.preg 的速度比 ereg 要快很多，preg的速度要远远比ereg快3倍。
+    6.关于”.”：点在正则里面一般是除了换行符以外的全部字符，但是在ereg里面的”.”是任意字符，即包括换行符！如果在preg里面希望”.” 能够包括换行符，可以在修饰符中加上”s”

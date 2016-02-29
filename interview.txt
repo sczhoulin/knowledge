@@ -1,0 +1,65 @@
+1、数据库中的事务是什么? 
+	答 事务（transaction）是作为一个单元的一组有序的数据库操作。如果组中的所有操作都成功，则认为事务成功，即使只有一个操作失败，事务也不成功。
+		如果所有操作完成，事务则提交，其修改将作用于所有其他数据库进程。如果一个操作失败，则事务将回滚，该事务所有操作的影响都将取消。
+2、对于大流量的网站,您采用什么样的方法来解决访问量问题?
+	答：（1）确认服务器硬件是否足够支持当前的流量
+		（2）数据库读写分离
+		（3）优化数据表
+		（4）程序功能规则，禁止外部的盗链
+		（5）控制大文件的下载
+		（6）使用不同主机分流主要流量
+3、获取服务器IP     gethostbyname("www.baidu.com");
+4、mysql中update用low_priority让update不锁定表
+5、file_get_contents    读入一个文件的内容，包括网站的内容
+6、状态码401表示未被授权
+7、析构函数是用来在对象关闭时完成的特殊工作 
+8、allow_call_time_pass_reference php.ini中，设置函数参数可以传引用
+9、stringObject.toLocaleUpperCase()     JS把字符串转换成大写
+10、grant  操作mysql数据库权限  identified by
+11、过滤JS/VBS脚本  preg_replace("/<script[^>].*?>.*?</script>si/", '', $script)
+12、pathinfo（）    函数以数组的形式返回文件路径的信息
+13、array_walk()    对数组中的每个元素应用回调函数。如果成功则返回 TRUE，否则返回 FALSE。
+14、fopen();
+15、similar_text()  函数计算两个字符串的匹配字符的数目。
+16、short_open_tag = On 设置PHP允许短标签
+17、instanceof  使用这个关键字可以确定一个对象是类的实例、类的子类，还是实现了某个特定接口，并进行相应的操作
+18、func_num_args() 这个函数返回的是当前函数的参数数量 返回的是数字
+    func_get_arg()函数返回的是指定位置的参数的值
+    func_get_args()这个函数返回的是包含当前函数所有参数的一个数组
+19、array_rand（） 从数组中随机取出一个或多个单元 
+20、mysql_real_escape_string()   转义 SQL 语句中使用的字符串中的特殊字符，并考虑到连接的当前字符集 
+21、call_user_func（）  把第一个参数作为回调函数调用
+22、约瑟夫环问题：http://9iphp.com/web/php/1112.html；
+23、move_upload_file();上传文件
+24、filter_var();   函数通过指定的过滤器过滤变量。
+25、set_error_handler() 设置一个用户定义的错误处理函数
+26、set_exception_handler() 设置一个用户定义的异常处理函数。 
+27、innodb 和 myisam的区别
+    （1）、MyISAM类型不支持事务处理等高级处理，而InnoDB类型支持。MyISAM类型的表强调的是性能，其执行数度比InnoDB类型更快，
+    但是不提供事务支持，而InnoDB提供事务支持已经外部键等高级数据库功能。
+    （2）、InnoDB不支持FULLTEXT类型的索引
+    （3）、InnoDB 中不保存表的具体行数，也就是说，执行select count(*) from table时，InnoDB要扫描一遍整个表来计算有多少行，但是MyISAM只要简单的读出保存好的行数即可。
+    注意的是，当count(*)语句包含 where条件时，两种表的操作是一样的。
+    （4）、对于AUTO_INCREMENT类型的字段，InnoDB中必须包含只有该字段的索引，但是在MyISAM表中，可以和其他字段一起建立联合索引
+    （5）、DELETE FROM table时，InnoDB不会重新建立表，而是一行一行的删除。
+    （6）、LOAD TABLE FROM MASTER操作对InnoDB是不起作用的，解决方法是首先把InnoDB表改成MyISAM表，导入数据后再改成InnoDB表，
+    但是对于使用的额外的InnoDB特性(例如外键)的表不适用。
+    （7）、InnoDB表的行锁也不是绝对的，假如在执行一个SQL语句时MySQL不能确定要扫描的范围，InnoDB表同样会锁全表，
+    例如update table set num=1 where name like “%aaa%”
+    （8）、两种类型最主要的差别就是Innodb 支持事务处理与外键和行级锁.而MyISAM不支持.所以MyISAM往往就容易被人认为只适合在小项目中使用。
+28、spl_autoload_register() 注册给定的函数作为 __autoload 的实现
+    register_shutdown_function()    能够在脚本终止前回调注册的函数
+29、debug_print_backtrace() 打印一条回溯。 
+    debug_backtrace()   产生一条回溯跟踪(backtrace)
+30、iconv（）   字符串按要求的字符编码来转换
+31、filemtime() 取得文件修改时间
+32、extract()	从数组中将变量导入到当前的符号表
+33、HOOK，钩子，个人感觉钩子 整实现应该叫事件驱动
+34、microtime()	 返回当前 Unix 时间戳和微秒数
+35、memory_get_usage()	返回分配给 PHP 的内存量
+36、number_format()	 以千位分隔符方式格式化一个数字
+37、php_strip_whitespace()返回删除注释和空格后的PHP源码
+38、is_writable()判断给定的文件名是否可写
+39、call_user_func()	把第一个参数作为回调函数调用
+40、ReflectionMethod()	类报告了一个方法的有关信息。 
+41、parse_str()	将字符串解析成多个变量
