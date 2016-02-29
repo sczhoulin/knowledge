@@ -11,3 +11,15 @@ function checkInput ($value) {
         }
         return $value;
 }
+
+/**
+ * 获取文件后缀名
+ * @param type $filename        文件名字
+ * @return string       返回文件后缀名
+ */
+function getFileExt ($filename) {
+        $strs = explode('.', $filename);
+        $len = count($strs);
+        $extension = $strs[$len-1];
+        return strtolower($extension);
+}
