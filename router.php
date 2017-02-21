@@ -38,6 +38,5 @@ spl_autoload_register(function($className){
     }
 });
 
-$file = new File;
 
 

@@ -6,9 +6,9 @@ server
 {
     listen 80;
     #listen [::]:80 default_server ipv6only=on;
-    server_name promotion.dzsofts.net;
+    server_name knowledge.net;
     index index.html index.htm index.php index.shtml;
-    root  /data/vhosts/promotion/www/public_html;
+    root  /data/knowledge;
 
     #error_page   404   /404.html;
     include enable-php.conf;
@@ -24,8 +24,8 @@ server
             if (!-e $request_filename) {
                     rewrite ^(.*)$ /router.php last;
                     break;
-            }	
-    }	
+            }   
+    }   
 
     location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$
     {
@@ -42,6 +42,7 @@ server
         deny all;
     }
 
-    access_log  /home/wwwlogs/access.log;
+    access_log  /usr/local/nginx/logs/access.log;
 
 }
+           
